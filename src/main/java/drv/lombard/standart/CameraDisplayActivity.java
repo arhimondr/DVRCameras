@@ -35,8 +35,6 @@ public class CameraDisplayActivity extends Activity {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    //Debug.startMethodTracing("calc");
-
     final String sessionId = getIntent().getStringExtra(SESSION_ID);
     final String connectionUrl = getIntent().getStringExtra(CONNECTION_URL);
 
@@ -73,7 +71,6 @@ public class CameraDisplayActivity extends Activity {
   protected void onDestroy() {
     displayVideoApplication.stop();
     wakeLock.release();
-    //Debug.stopMethodTracing();
     super.onDestroy();
   }
 
