@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="vertical">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="vertical"
+                  android:layout_width="fill_parent"
+                  android:layout_height="fill_parent"
+            >
+        <Button
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Connect"
+                android:id="@+id/connectButton" android:textSize="25dp" android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp" android:layout_marginTop="10dp" android:longClickable="false"
+                android:onClick="onConnectPressed" android:singleLine="false" android:height="100dp"
+                android:focusableInTouchMode="false"/>
+
+        <ExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"/>
+
+        <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Login/Password"
+                      android:layout_marginLeft="20dp" android:textStyle="bold" android:textSize="20dp"
+                      android:layout_marginTop="10dp"/>
+
+            <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:id="@+id/Login" android:layout_marginTop="5dp"
+                      android:layout_marginLeft="20dp" android:layout_marginRight="20dp"
+                      android:hint="Login" android:text="admin" android:inputType="text" android:singleLine="true"/>
+            <EditText android:layout_width="fill_parent" android:layout_height="wrap_content"
+                      android:id="@+id/Password" android:layout_marginTop="5dp"
+                      android:layout_marginLeft="20dp" android:layout_marginRight="20dp"
+                      android:hint="Password" android:text="admin"
+                      android:inputType="textPassword" android:singleLine="true" android:password="true"/>
+            <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Connection URL"
+                    android:layout_marginLeft="20dp" android:textStyle="bold" android:textSize="20dp"
+                    android:layout_marginTop="10dp"/>
+            <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="http://dvr.dyndns.org:88"
+                    android:id="@+id/connectionUrl" android:layout_marginTop="5dp" android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp" android:inputType="textUri" android:hint="Enter connection URL"
+                    android:singleLine="true"/>
+
+            <Button
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Default Connection Params"
+                    android:id="@+id/putDefaultParamsButton" android:layout_marginLeft="20dp" android:layout_marginTop="20dp"
+                    android:onClick="onDefaultPressed"
+                    android:layout_marginRight="20dp"/>
+
+    </LinearLayout>
+</ScrollView>
+
